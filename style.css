@@ -208,7 +208,7 @@ button {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        height: calc(72px + 72px + 1em);
+        height: calc(72px + 72px + 2em);
         overflow: hidden;
         row-gap: 1em;
     }
