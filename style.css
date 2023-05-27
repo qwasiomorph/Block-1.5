@@ -83,7 +83,7 @@ button {
     width: fit-content;
     display: flex;
     justify-content: center;
-    margin: 2em 0;
+    margin: 1.4em 0;
     
 }
 
@@ -155,11 +155,11 @@ button {
 }
 
 .swiper-slide-next .brand-list__member {
-    transform: translateX(-30%);
+    transform: translateX(-27%);
 }
 
 .swiper-slide-prev .brand-list__member {
-    transform: translateX(30%);
+    transform: translateX(27%);
 }
 
 .pagination-wrapper {
@@ -174,6 +174,7 @@ button {
     background-color: #DDDDDD;
     width: 12px;
     height: 12px;
+    margin: 0 6px !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -204,6 +205,10 @@ button {
     .swiper-slide-prev .brand-list__member {
         transform: none;
     }
+    .brand-list__member{
+        margin-right: 0 !important;
+        transform: translateX(0);
+    }
     .brand-list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -211,9 +216,13 @@ button {
         height: calc(72px + 72px + 2em);
         overflow: hidden;
         row-gap: 1em;
+        column-gap: 2em;
+    }
+    .brand-list__member {
+        width: 89%;
     }
     .main__swiper {
-        padding: 2em;
+        padding: 1.5em;
         padding-bottom: 1em;
     }
 }

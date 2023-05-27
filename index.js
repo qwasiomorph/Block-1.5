@@ -6,27 +6,29 @@ const moreButtonIcon = document.querySelector(".more-button__icon")
 expandButton.addEventListener('click', (e)=>{
     e.preventDefault()
     e.stopPropagation()
-    if(!brandList.classList.contains('expanded')) {
-        brandList.classList.add('expanded')
+    brandList.classList.toggle('expanded')
+    moreButtonIcon.classList.toggle("active")
+    if(moreButtonIcon.classList.contains("active")) {
         expandButton.children[1].textContent = 'Скрыть'
-        moreButtonIcon.classList.add("active")
     } else {
-        brandList.classList.remove('expanded')
-        moreButtonIcon.classList.remove("active")
         expandButton.children[1].textContent = 'Показать всё'
     }
 })
 
-if(window.innerWidth < 400) {
+if(window.innerWidth < 768) {
     const swiper = new Swiper('.swiper', {
         // modules: [Navigation, Pagination],
         // Default parameters
         pagination: {
             el: ".swiper-pagination",
+            clickable: true
         },
         slidesPerView: 1,
         spaceBetween: 10,
-        
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
         // Responsive breakpoints
         breakpoints: {
           // when window width is >= 320px
@@ -34,6 +36,10 @@ if(window.innerWidth < 400) {
             slidesPerView: 1,
             spaceBetween: 20
           },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          }
         },
         
     })
