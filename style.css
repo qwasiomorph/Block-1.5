@@ -195,6 +195,23 @@ button {
     }
 }
 
+@media (min-width: 420px) and (orientation: landscape) {
+    .swiper-slide {
+        height: 78px;
+    }
+    .swiper-slide-next .brand-list__member {
+        transform: none;
+    }
+    .swiper-slide-next .brand-list__member {
+        position: absolute;
+        right: 0;
+        
+    }
+    .swiper-slide-prev .brand-list__member {
+        transform: none;
+    }
+}
+
 
 @media (min-width: 788px) {
     .header__title {

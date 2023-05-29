@@ -38,7 +38,7 @@ if(window.innerWidth < 768) {
           },
           600: {
             slidesPerView: 2,
-            spaceBetween: 300
+            spaceBetween: 20
           }
         },
         
